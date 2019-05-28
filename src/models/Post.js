@@ -33,7 +33,8 @@
         }).promise()
         }
         else{
-            return promisify(fs.unlink)(path.resolve(__dirname,'..','..','tmp','uploads',this.key));
+            //promissify serve para versões antigas de callback
+            return promisify(fs.unlink).then(path.resolve(__dirname,'..','..','tmp','uploads',this.key));
         }
     });
 
