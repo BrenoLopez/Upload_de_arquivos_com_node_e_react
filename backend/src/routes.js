@@ -16,7 +16,7 @@
             key,
             url
         });
-        console.log(req.file);
+        console.log(req);
         return res.json(post);
 
     });
